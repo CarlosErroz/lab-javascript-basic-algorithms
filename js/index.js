@@ -5,7 +5,7 @@ console.log ("Iteration 1: Names and Input:")
 let hacker1 = "Carlos";
 console.log(`The driver's name is ${hacker1}`);
 
-let hacker2 = "Chrome";
+let hacker2 = "Carlos";
 console.log(`The navigator's name is ${hacker2}`);
 console.log("\n")
 
@@ -35,3 +35,24 @@ for (let i=hacker2.length; i>0; i--) {
     hacker2ReverseOrder += hacker2[i-1];
 }
 console.log(hacker2ReverseOrder);
+
+let contarParaVerSiSonExactamenteIguales = 0;
+for (let i=0; (hacker1[i]=hacker2[i]); i++) {
+    if (hacker1[i]<hacker2[i]) {
+        console.log("The driver's name goes first.")
+        break;
+    } else if (hacker1[i]>hacker2[i]) {
+        console.log("Yo, the navigator goes first definitely.")
+        break;
+    } else {contarParaVerSiSonExactamenteIguales=contarParaVerSiSonExactamenteIguales+1}
+}
+if (contarParaVerSiSonExactamenteIguales===hacker1.length) {
+    console.log("What?! You both have the same name?")
+}
+
+/*if (hacker1[0]<hacker2[0]) {
+    console.log("The driver's name goes first.")
+} else if (hacker1[0]>hacker2[0]) {
+    console.log("Yo, the navigator goes first definitely.")
+} else console.log("What?! You both have the same name?")
+*/
